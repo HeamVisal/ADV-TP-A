@@ -1,2 +1,4 @@
 # ADV-TP-A
-This repo is for school work project and TP
+
+This repository stores source code, course materials, homework, and practical
+activities for the Advanced Programming subject.
