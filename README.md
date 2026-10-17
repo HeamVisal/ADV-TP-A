@@ -4,7 +4,7 @@ This repository stores source code, course materials, homework, and practical
 activities for the Advanced Programming subject.
 
 - **Lecturer:** Mr.VANN Visal
-- **School:** ITC
+- **Institution:** Institute of Technology of Cambodia (ITC)
 
 ## Repository rules
 
