@@ -1,0 +1,10 @@
+Good afternoon, Student:
+
+The homework will focus on four main learning objectives:
+
+1. Course Summary: Understand the LLM fine-tuning workflow, Gemma 3, LoRA, PEFT, and dataset preparation.
+2. Notebook Configuration: Understand and modify training hyperparameters.
+3. Loss Analysis: Monitor and interpret Training Loss and Validation Loss to identify overfitting and underfitting.
+4. Practical Experiment: Fine-tune the model using a different dataset and compare the results.
+
+Thank you!🙏🌺
