@@ -1,0 +1,6 @@
+Own function : 0.6666666666666666
+scikit-learn : 0.6666666666666666
+As a percentage: 66.7%
+Group 2 table - Gemini 1.5: 0.8 Llama 3: 0.8
+Majority baseline accuracy: 0.95
+Balanced accuracy        : 0.5

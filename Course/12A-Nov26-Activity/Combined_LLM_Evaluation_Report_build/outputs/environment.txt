@@ -1,0 +1,10 @@
+Python 3.13.13 on Linux-7.0.0-43-generic-x86_64-with-glibc2.43
+scikit-learn==1.9.1
+sacrebleu==2.6.0
+nltk==3.10.4
+rouge-score==0.1.2
+jiwer==4.0.0
+bert-score==0.3.13
+torch==2.15.0+cpu
+transformers==5.23.0
+regex==2026.11.9

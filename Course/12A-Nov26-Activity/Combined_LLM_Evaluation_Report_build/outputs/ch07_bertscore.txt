@@ -1,0 +1,11 @@
+Ex1 Qwen2.5-0.5B  P=0.9226 R=0.9042 F1=0.9133
+Ex1 SmolLM2-135M  P=1.0000 R=1.0000 F1=1.0000
+Ex2 Qwen2.5-0.5B  P=0.8497 R=0.9181 F1=0.8826
+Ex2 SmolLM2-135M  P=0.9563 R=0.7136 F1=0.8173
+'The kid feels joyful'                     raw F1=0.7491 rescaled F1=0.6127
+'The cat chased the dog'                   raw F1=0.9356 rescaled F1=0.9006
+'The medicine is not safe for children.'   raw F1=0.9362 rescaled F1=0.9015
+'The train leaves at 5 p.m.'               raw F1=0.9700 rescaled F1=0.9537
+Hash: bert-base-uncased_L9_no-idf_version=0.3.12(hug_trans=5.23.0)
+bert-base-multilingual-cased ['[UNK]']
+xlm-roberta-base ['▁ខ្ញុំ', 'ចូល', 'ចិត្ត', 'អាន', 'សៀវភៅ']

@@ -1,0 +1,7 @@
+Example 1 strict EM: 0.8
+Multiple references: 1
+'ភ្នំពេញ។'
+'paris'                      raw=0 normalized=1
+'Phnom Penh!'                raw=0 normalized=1
+'United States'              raw=0 normalized=1
+'The answer is Phnom Penh'   raw=0 normalized=0

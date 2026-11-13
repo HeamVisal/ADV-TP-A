@@ -1,0 +1,25 @@
+'I love to read book'          S=1 D=0 I=0 WER=0.2000
+'weather is very nice today'   S=0 D=1 I=1 WER=0.4000
+'the cat sit on the mat'       S=1 D=0 I=0 WER=0.1667
+'turn of light'                S=1 D=1 I=0 WER=0.5000
+'yes yes yes'                  S=0 D=0 I=2 WER=2.0000
+=== SENTENCE 1 ===
+
+REF: The weather is **** nice today
+HYP: *** weather is very nice today
+       D               I           
+
+=== SUMMARY ===
+number of sentences: 1
+substitutions=0 deletions=1 insertions=1 hits=4
+
+mer=33.33%
+wil=36.00%
+wip=64.00%
+wer=40.00%
+
+Swap: 0 1 1 1.0
+Corpus WER: 0.3333
+Raw WER    : 0.5
+Cleaned WER: 0.0
+Empty reference: 2

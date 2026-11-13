@@ -1,0 +1,20 @@
+  p1 = 5/5
+  p2 = 3/4
+  c=5, r=6, BP=0.8187
+BLEU-2 (own): 0.709
+  p1 = 5/5
+  p2 = 3/4
+  p3 = 2/3
+  p4 = 1/2
+  c=5, r=6, BP=0.8187
+BLEU-4 (own): 0.5789
+BLEU-4 (sacreBLEU): BLEU = 57.89 100.0/75.0/66.7/50.0 (BP = 0.819 ratio = 0.833 hyp_len = 5 ref_len = 6)
+Clipped unigram precision: 0.2857142857142857
+  p1 = 2/4
+  p2 = 0/3
+Own, unsmoothed : 0.0
+NLTK method1    : 0.0955
+sacreBLEU (exp) : 19.0
+Corpus BLEU: 52.35
+Sentence BLEU: [100.0, 7.25] average: 53.63
+Signature: nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0

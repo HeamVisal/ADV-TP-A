@@ -1,0 +1,19 @@
+[0, 1, 2, 3, 4]
+[1, 1, 2, 3, 4]
+[2, 2, 1, 2, 3]
+[3, 3, 2, 1, 2]
+[4, 4, 3, 2, 2]
+[5, 5, 4, 3, 2]
+'cat'                              -> 'cut'                              CER=33.33%
+'cat'                              -> 'cart'                             CER=33.33%
+'plant'                            -> 'blat'                             CER=40.00%
+'kitten'                           -> 'sitting'                          CER=50.00%
+'a'                                -> 'abcd'                             CER=300.00%
+'The card is valid for 4 years.'   -> 'The card is valid for 5 years.'   CER=3.33%
+Overall: 0 errors / 44 characters = 0.00%
+Code points: 6 ['U+179F', 'U+17BD', 'U+179F', 'U+17D2', 'U+178F', 'U+17B8']
+Grapheme clusters (\X): ['សួ', 'ស្', 'តី']
+Raw CER: 2.0
+CER after NFC: 0.0
+jiwer default strips outer spaces: 0.0
+jiwer S/D/I: 1 1 0

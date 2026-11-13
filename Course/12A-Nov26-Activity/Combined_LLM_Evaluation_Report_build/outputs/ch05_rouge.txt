@@ -1,0 +1,14 @@
+'the weather is cold'          rouge1  P=1.0000 R=0.8000 F1=0.8889
+'the weather is cold'          rouge2  P=1.0000 R=0.7500 F1=0.8571
+'the weather is cold'          rougeL  P=1.0000 R=0.8000 F1=0.8889
+'the cat rested on the mat'    rouge1  P=0.8333 R=0.8333 F1=0.8333
+'the cat rested on the mat'    rouge2  P=0.6000 R=0.6000 F1=0.6000
+'the cat rested on the mat'    rougeL  P=0.8333 R=0.8333 F1=0.8333
+rougeL    P=0.4286 R=0.5000 F1=0.4615
+rougeLsum P=0.7143 R=0.8333 F1=0.7692
+ROUGE-S  the cat sat / the cat slept: (0.3333, 0.3333, 0.3333)
+ROUGE-SU A B C / C B A: (0.5, 0.5, 0.5)
+ROUGE-W recall for 'A B C D H I K': WLCS=16, R=0.5714
+ROUGE-W recall for 'A H B K C I D': WLCS=4, R=0.2857
+Default tokenizer, identical Khmer texts: P=0.0000 R=0.0000 F1=0.0000
+Whitespace tokenizer, identical Khmer texts: P=1.0000 R=1.0000 F1=1.0000

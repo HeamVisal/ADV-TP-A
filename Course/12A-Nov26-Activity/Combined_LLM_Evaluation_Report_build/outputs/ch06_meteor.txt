@@ -1,0 +1,9 @@
+'the cat sleeps'                                     0.9815
+'sleeps cat the'                                     0.5000
+'Machine learning helps computers learn from data.'  0.9985
+'Computers learn from data with machine learning.'   0.5357
+'the pupil is glad'                                  0.7361
+'the cat is sleeping'                                0.6389
+Split on spaces     : 0.5357
+Punctuation split   : 0.8406
+TypeError: "hypothesis" expects pre-tokenized hypothesis (Iterable[str] ...
