@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn Character Error Rate with an interactive calculator, visible character edits, and simple worked examples. A Group 9 classroom demo.">
+  <meta name="theme-color" content="#f5f4ee">
+  <title>CER Lab · Group 9</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%232b624a'/%3E%3Ctext x='24' y='33' text-anchor='middle' font-family='sans-serif' font-size='30' fill='white'%3Ec%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="cer.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#calculator">Skip to calculator</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="CER Lab home"><span class="brand-mark" aria-hidden="true">c<span>↗</span></span><span>CER<span class="brand-light"> Lab</span></span></a>
+      <nav aria-label="Main navigation"><a href="#calculator">Try the demo</a><a href="#how-it-works">How it works</a></nav>
+      <span class="group-label"><span class="status-dot"></span> GROUP 09</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="tiny-rule"></span> TEXT EVALUATION, MADE VISIBLE</div>
+        <h1 id="page-title">Small changes.<br><span>A measurable difference.</span></h1>
+        <p>How close are two texts? Explore <strong>Character Error Rate</strong>, one letter, space, and edit at a time.</p>
+        <div class="intro-note"><span aria-hidden="true">↳</span> A closer text match does not always mean a correct answer.</div>
+      </section>
+
+      <section id="calculator" class="calculator" aria-labelledby="calculator-title">
+        <div class="workspace">
+          <div class="section-heading"><div><span class="step-label">01 / THE TEXT</span><h2 id="calculator-title">Put two texts side by side.</h2></div><span class="local-badge">Live · in your browser</span></div>
+          <form id="compare-form" novalidate>
+            <div class="input-grid">
+              <div class="input-field"><label for="reference">Reference <span>The text you expect</span></label><textarea id="reference" rows="6" spellcheck="false" aria-describedby="reference-count text-rules">plant</textarea><div class="field-footer"><span>Expected text</span><span id="reference-count">5 characters</span></div></div>
+              <div class="input-field"><label for="prediction">Prediction <span>The text you want to check</span></label><textarea id="prediction" rows="6" spellcheck="false" aria-describedby="prediction-count text-rules">blat</textarea><div class="field-footer"><span>An empty prediction is allowed</span><span id="prediction-count">4 characters</span></div></div>
+            </div>
+            <div id="text-rules" class="rules-note"><span aria-hidden="true">ⓘ</span><span>Results update as you type. Capitals, punctuation, spaces, and line breaks all count. Up to 2,000 characters per text.</span></div>
+            <div class="form-actions"><button class="primary-button" type="submit">Calculate CER <span aria-hidden="true">↗</span></button><button class="text-button" id="clear-button" type="button">Clear texts</button></div>
+            <p id="error-message" class="error-message" role="alert" hidden></p>
+          </form>
+          <div class="examples"><span class="examples-title">OR TRY AN EXAMPLE</span><div class="example-buttons"><button type="button" data-example="two-edits" aria-pressed="true">Two edits <span>↗</span></button><button type="button" data-example="insertion" aria-pressed="false">Extra letters <span>↗</span></button><button type="button" data-example="over-100" aria-pressed="false">Above 100% <span>↗</span></button><button type="button" data-example="fact" aria-pressed="false">One wrong fact <span>↗</span></button><button type="button" data-example="khmer" aria-pressed="false">Khmer text <span>↗</span></button></div></div>
+        </div>
+
+        <aside class="result-panel" aria-labelledby="result-heading">
+          <span class="step-label">02 / THE RESULT</span>
+          <div class="result-heading-row"><h2 id="result-heading">Character error rate</h2><span id="result-tag" class="result-tag">2 edits</span></div>
+          <div id="result-output" aria-live="polite" aria-atomic="true"><p class="big-score"><span id="score">40.00</span><span class="percent">%</span></p><p id="result-description" class="result-description">2 character edits across 5 reference characters.</p></div>
+          <div class="formula-card"><span>THE CALCULATION</span><div><span id="formula-numerator">1 + 1 + 0</span><span class="division-line"></span><span id="formula-denominator">5</span></div><span>= <strong id="formula-result">0.4000</strong></span></div>
+          <div class="error-counts"><div class="count-item substitution"><span class="count-symbol">S</span><strong id="substitutions">1</strong><span>Replaced</span></div><div class="count-item deletion"><span class="count-symbol">D</span><strong id="deletions">1</strong><span>Missing</span></div><div class="count-item insertion"><span class="count-symbol">I</span><strong id="insertions">0</strong><span>Added</span></div></div>
+          <p class="result-footnote">Lower means a closer character match.<br><strong>0% = an exact match.</strong> Scores can exceed 100%.</p>
+          <p id="result-status" class="result-status" role="status">Showing the “Two edits” example.</p>
+        </aside>
+      </section>
+
+      <section class="alignment-section" aria-labelledby="alignment-title">
+        <div class="section-heading"><div><span class="step-label">03 / THE CHANGES</span><h2 id="alignment-title">See where the texts differ.</h2></div><button type="button" class="text-button download-button" id="download-button">Download result <span aria-hidden="true">↓</span></button></div>
+        <p class="section-description">One comparison with the smallest possible number of edits.</p>
+        <div class="alignment-box"><div class="alignment-row-labels" aria-hidden="true"><span>Reference</span><span>Prediction</span></div><div id="alignment" class="alignment" role="list" aria-label="Character comparison"></div></div>
+        <div class="alignment-legend"><span><i class="legend-dot match"></i>Match</span><span><i class="legend-dot substitution"></i>S · Replaced</span><span><i class="legend-dot deletion"></i>D · Missing</span><span><i class="legend-dot insertion"></i>I · Added</span><span class="space-key">␠ space &nbsp; ↵ line break &nbsp; ∅ no character</span></div>
+        <p id="example-explanation" class="example-explanation">Replace “p” with “b” and remove “n”. Two edits ÷ five reference characters = 40%.</p>
+        <details class="technical-note"><summary>Why might another tool show different edits?</summary><p>Some texts have several comparisons with the same minimum number of edits. A tool may choose different substitutions, deletions, or insertions, while the total and CER stay the same. Different text-cleaning rules can also change the score.</p><p>We count Unicode code points, as Python strings do. In Khmer, emoji, and text with combining marks, one visible symbol may contain several code points. We preserve the text without Unicode normalization.</p></details>
+      </section>
+
+      <section id="how-it-works" class="learn-section" aria-labelledby="learn-title">
+        <div class="learn-heading"><span class="step-label">A QUICK GUIDE</span><h2 id="learn-title">Three ways text can change.</h2><p>Each edit costs one. A matching character costs zero. We find the fewest edits from reference to prediction.</p></div>
+        <div class="learn-cards"><article><span class="learn-number substitution">S</span><h3>Substitution</h3><p>A character is replaced.</p><div class="word-example">c<span>a</span>t <span class="arrow">→</span> c<span>u</span>t</div></article><article><span class="learn-number deletion">D</span><h3>Deletion</h3><p>A reference character is missing.</p><div class="word-example">c<span>a</span>t <span class="arrow">→</span> ct</div></article><article><span class="learn-number insertion">I</span><h3>Insertion</h3><p>An extra character is added.</p><div class="word-example">cat <span class="arrow">→</span> ca<span>r</span>t</div></article></div>
+        <div class="takeaway"><div class="takeaway-icon" aria-hidden="true">!</div><div><h3>A small error can change a big fact.</h3><p>“4 years” and “5 years” differ by one character. CER measures that difference; it cannot decide which statement is true. Use it alongside a review of meaning and facts.</p></div><button type="button" data-load-fact class="text-button">Try this example ↗</button></div>
+      </section>
+
+      <section class="classroom-note" aria-label="About this demo"><h2>Built for learning.</h2><p>Group 9 · Advanced Programming for Data Science · Institute of Technology of Cambodia.</p><p>Examples on this page are teaching examples, not new model experiments. Calculations stay in this browser; the app sends no text to an AI service.</p><p class="source-links">Read more: <a href="https://jitsi.github.io/jiwer/reference/process/" target="_blank" rel="noopener noreferrer">JiWER: character errors ↗</a><a href="https://docs.python.org/3/howto/unicode.html" target="_blank" rel="noopener noreferrer">Python: Unicode text ↗</a></p></section>
+    </main>
+    <footer><a class="footer-brand" href="#">CER Lab <span> / Group 09</span></a><span>Small edits. Clear explanations.</span></footer>
+  </div>
+  <noscript><p class="noscript-note">Enable JavaScript to use the calculator. The explanations above can still be read without it.</p></noscript>
+</body>
+</html>
